@@ -7,14 +7,14 @@ import java.util.List;
 
 public class Person {
 
-  private final int id;
+  private final String id;
   private final String firstName;
   private final String lastName;
   private final int yearOfBirth;
   private final List<Address> addresses;
 
   @JsonCreator
-  public Person(@JsonProperty("id") int id,
+  public Person(@JsonProperty("id") String id,
       @JsonProperty("firstName") String firstName,
       @JsonProperty("lastName") String lastName,
       @JsonProperty("yearOfBirth") int yearOfBirth,
@@ -27,7 +27,7 @@ public class Person {
   }
 
   @JsonProperty("id")
-  public int getId() {
+  public String getId() {
     return id;
   }
 

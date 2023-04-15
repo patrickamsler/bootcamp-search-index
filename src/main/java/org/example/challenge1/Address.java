@@ -5,14 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Address {
 
-  private final int id;
+  private final String id;
   private final String street;
   private final String city;
   private final String state;
 
   @JsonCreator
   public Address(
-      @JsonProperty("id") int id,
+      @JsonProperty("id") String id,
       @JsonProperty("street") String street,
       @JsonProperty("city") String city,
       @JsonProperty("state") String state) {
@@ -22,7 +22,7 @@ public class Address {
     this.state = state;
   }
 
-  public int getId() {
+  public String getId() {
     return id;
   }
 

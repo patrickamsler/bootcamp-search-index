@@ -44,7 +44,7 @@ public class PersonProducer {
     // Publish each person to the Kafka topic
     for (Person person : people) {
       String json = objectMapper.writeValueAsString(person);
-      String key = Integer.toString(person.getId());
+      String key = person.getId();
       int partition = Math.abs(key.hashCode()) % NUM_PARTITIONS;
 
       ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, partition, key, json);

@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.UUID;
 
 public class RandomPersonGenerator {
 
@@ -24,9 +25,6 @@ public class RandomPersonGenerator {
 
 
   private static final Random RANDOM = new Random();
-
-  private static int personIdCounter = 1;
-  private static int addressIdCounter = 1;
 
   public static void main(String[] args) throws IOException {
     List<Person> people = generateRandomPeople(10);
@@ -48,7 +46,7 @@ public class RandomPersonGenerator {
   public static List<Person> generateRandomPeople(int numPeople) {
     List<Person> people = new ArrayList<>();
     for (int i = 0; i < numPeople; i++) {
-      int personId = personIdCounter++;
+      String personId = UUID.randomUUID().toString();
       String firstName = FIRST_NAMES[RANDOM.nextInt(FIRST_NAMES.length)];
       String lastName = LAST_NAMES[RANDOM.nextInt(LAST_NAMES.length)];
       int yearOfBirth = RANDOM.nextInt(50) + 1970;
@@ -70,7 +68,7 @@ public class RandomPersonGenerator {
   }
 
   public static Address generateRandomAddress() {
-    int addressId = addressIdCounter++;
+    String addressId = UUID.randomUUID().toString();
     String street = STREET_NAMES[RANDOM.nextInt(CITIES.length)] + " " + (RANDOM.nextInt(1000) + 1);
     String city = CITIES[RANDOM.nextInt(CITIES.length)];
     String state = STATES[RANDOM.nextInt(STATES.length)];
