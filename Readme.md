@@ -9,7 +9,7 @@
 ## How to run
 Please note that the instructions provided are specific to running Elastic and Kafka using Docker. If you have Elastic and Kafka running on your local machine, you can skip this step.
 
-### Elastic Docker Setup
+### Run Elastic with Docker
 There is a Docker Compose file that defines two services for running Elastic and Kibana on your local machine.
 
 1. `cd bootcamp-search-index/docker/elastic`
@@ -22,7 +22,7 @@ username: `elastic`
 
 password: `elastic`
 
-### Kafka Docker Setup
+### Run Kafka with Docker
 The Docker Compose file sets up a Confluent Kafka cluster with a Zookeeper node, a single broker, a Schema Registry, Kafka Connect, the Control Center and a KSQLDB server.
 
 1. `cd bootcamp-search-index/docker/kafka`
