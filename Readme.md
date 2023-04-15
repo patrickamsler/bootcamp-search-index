@@ -20,7 +20,7 @@ username: `elastic`
 password: `elastic`
 
 ### Kafka Docker Setup
-1. `cd elastic-playground/docker/kafka`
+1. `cd bootcamp-search-index/docker/kafka`
 2. `docker-compose up -d`
 
 Access Confluent Kafka UI: http://localhost:9021
