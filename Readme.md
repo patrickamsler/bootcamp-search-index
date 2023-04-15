@@ -13,7 +13,9 @@ Please note that the instructions provided are specific to running Elastic and K
 1. `cd bootcamp-search-index/docker/elastic`
 2. `docker-compose up -d`
 
-Access Kibana: http://localhost:5601
+The Docker Compose file defines two services for running Elastic and Kibana on your local machine.
+
+Access Kibana UI: http://localhost:5601
 
 username: `elastic`
 
@@ -23,7 +25,9 @@ password: `elastic`
 1. `cd bootcamp-search-index/docker/kafka`
 2. `docker-compose up -d`
 
-Access Confluent Kafka UI: http://localhost:9021
+The Docker Compose file sets up a Confluent Kafka cluster with a Zookeeper node, a single broker, a Schema Registry, Kafka Connect node, the Control Center and a KSQLDB server.
+
+Access Kafka Control Center UI: http://localhost:9021
 
 ###  Clean up
 `docker-compose down -v`
