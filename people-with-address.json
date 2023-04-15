@@ -1,0 +1,141 @@
+[ {
+  "id" : 1,
+  "firstName" : "Samantha",
+  "lastName" : "Davis",
+  "yearOfBirth" : 2002,
+  "addresses" : [ {
+    "id" : 1,
+    "street" : "Second St 841",
+    "city" : "Miami",
+    "state" : "FL"
+  }, {
+    "id" : 2,
+    "street" : "Fourth St 726",
+    "city" : "Houston",
+    "state" : "WA"
+  } ]
+}, {
+  "id" : 2,
+  "firstName" : "David",
+  "lastName" : "Lee",
+  "yearOfBirth" : 2017,
+  "addresses" : [ {
+    "id" : 3,
+    "street" : "Fourth St 466",
+    "city" : "Chicago",
+    "state" : "NY"
+  } ]
+}, {
+  "id" : 3,
+  "firstName" : "David",
+  "lastName" : "Taylor",
+  "yearOfBirth" : 1978,
+  "addresses" : [ {
+    "id" : 4,
+    "street" : "Fifth Ave 149",
+    "city" : "Miami",
+    "state" : "NY"
+  }, {
+    "id" : 5,
+    "street" : "Third St 889",
+    "city" : "Houston",
+    "state" : "NY"
+  } ]
+}, {
+  "id" : 4,
+  "firstName" : "Emily",
+  "lastName" : "Smith",
+  "yearOfBirth" : 1998,
+  "addresses" : [ {
+    "id" : 6,
+    "street" : "Main St 149",
+    "city" : "Miami",
+    "state" : "WA"
+  }, {
+    "id" : 7,
+    "street" : "Second St 838",
+    "city" : "Houston",
+    "state" : "TX"
+  } ]
+}, {
+  "id" : 5,
+  "firstName" : "Samantha",
+  "lastName" : "Taylor",
+  "yearOfBirth" : 1989,
+  "addresses" : [ {
+    "id" : 8,
+    "street" : "First St 64",
+    "city" : "Los Angeles",
+    "state" : "NY"
+  } ]
+}, {
+  "id" : 6,
+  "firstName" : "Samantha",
+  "lastName" : "Johnson",
+  "yearOfBirth" : 2012,
+  "addresses" : [ {
+    "id" : 9,
+    "street" : "Fifth Ave 349",
+    "city" : "Miami",
+    "state" : "WA"
+  }, {
+    "id" : 10,
+    "street" : "Main St 238",
+    "city" : "New York",
+    "state" : "NY"
+  } ]
+}, {
+  "id" : 7,
+  "firstName" : "Michael",
+  "lastName" : "Taylor",
+  "yearOfBirth" : 1995,
+  "addresses" : [ {
+    "id" : 11,
+    "street" : "Second St 203",
+    "city" : "Chicago",
+    "state" : "TX"
+  }, {
+    "id" : 12,
+    "street" : "Second St 880",
+    "city" : "Houston",
+    "state" : "NY"
+  } ]
+}, {
+  "id" : 8,
+  "firstName" : "John",
+  "lastName" : "Davis",
+  "yearOfBirth" : 1978,
+  "addresses" : [ {
+    "id" : 13,
+    "street" : "Third St 176",
+    "city" : "New York",
+    "state" : "FL"
+  } ]
+}, {
+  "id" : 9,
+  "firstName" : "Jane",
+  "lastName" : "Johnson",
+  "yearOfBirth" : 1996,
+  "addresses" : [ {
+    "id" : 14,
+    "street" : "Fifth Ave 651",
+    "city" : "Miami",
+    "state" : "NY"
+  }, {
+    "id" : 15,
+    "street" : "Third St 792",
+    "city" : "Seattle",
+    "state" : "CA"
+  } ]
+}, {
+  "id" : 10,
+  "firstName" : "John",
+  "lastName" : "Smith",
+  "yearOfBirth" : 1985,
+  "addresses" : [ {
+    "id" : 16,
+    "street" : "Main St 167",
+    "city" : "Chicago",
+    "state" : "CA"
+  } ]
+} ]
