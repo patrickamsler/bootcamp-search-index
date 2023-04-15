@@ -1,4 +1,4 @@
-package org.example.domain;
+package org.example.challenge1;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

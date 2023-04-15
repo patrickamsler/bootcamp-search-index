@@ -1,4 +1,4 @@
-package org.example;
+package org.example.challenge1;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -12,8 +12,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-import org.example.domain.Address;
-import org.example.domain.Person;
 
 public class RandomPersonGenerator {
 

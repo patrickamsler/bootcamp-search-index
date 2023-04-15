@@ -1,4 +1,4 @@
-package org.example;
+package org.example.challenge1;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,7 +12,6 @@ import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.producer.*;
 
 import java.util.Properties;
-import org.example.domain.Person;
 
 public class PersonProducer {
 
