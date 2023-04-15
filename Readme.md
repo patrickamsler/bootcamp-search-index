@@ -16,7 +16,7 @@ password: `elastic`
 
 Access Confluent Kafka UI: http://localhost:9021
 
-##  How clean Up
+##  Clean up
 `docker-compose down -v`
 
 Removes all containers, volumes and networks
