@@ -1,10 +1,14 @@
 # Tech Bootcamp - Search Index
 
+## Table of Contents
 - [How to run](#how-to-run)
     - [Elastic Docker Setup](#elastic-docker-setup)
     - [Kafka Docker Setup](#kafka-docker-setup)
     - [Clean up](#clean-up)
 
+## Overview
+
+TODO add description
 
 ## How to run
 Please note that the instructions provided are specific to running Elastic and Kafka using Docker. If you have Elastic and Kafka running on your local machine, you can skip this step.
