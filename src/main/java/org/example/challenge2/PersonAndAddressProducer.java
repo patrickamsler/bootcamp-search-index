@@ -62,7 +62,7 @@ public class PersonAndAddressProducer {
     for (Address address : addresses) {
       Message message = new Message(address.getId(), MessageType.ADDRESS, address);
       String key = address.getId();
-      // use the personId as the key to ensure that the address and person are on the same partition
+      // use the personId to calculate the partition to ensure that the person and address are on the same partition
       int partition = Math.abs(address.getPersonId().hashCode()) % NUM_PARTITIONS;
       produceMessage(producer, partition, key, message);
     }
