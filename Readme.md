@@ -14,8 +14,8 @@
 ## Overview
 
 Welcome to the Quarkus-Kafka-Elasticsearch bootcamp challenge! 
-This event is designed to test your skills in creating a scalable and efficient Elasticsearch indexer using Quarkus and Kafka. 
-Your mission is to create a seamless integration between multiple backends and a centralized Elasticsearch datastore.
+This event is designed to improve our skills in creating a scalable and efficient Elasticsearch indexer using Quarkus and Kafka. 
+The mission is to create a seamless integration between multiple backends and a centralized Elasticsearch datastore.
 
 ## Challenges
 
