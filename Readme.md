@@ -21,8 +21,7 @@ Your mission is to create a seamless integration between multiple backends and a
 
 You will be provided with a Kafka topic and sample code to simulate multiple backends, each with their own database.
 Your task is to develop the Indexer as a Quarkus application that consumes messages from the Kafka topic and indexes the data into a central readonly Elasticsearch index.
-The solution should ensure data synchronization between Elasticsearch and the various backends, with a focus on searchability and performance 
-avoiding the use of a relational database for full-text and fuzzy search.
+The solution should ensure data synchronization between Elasticsearch and the various backends, with a focus on searchability and performance, avoiding the use of a relational database for full-text and fuzzy search.
 
 Requirements:
 
@@ -60,7 +59,15 @@ A query for the created index might look like this:
 ```
 
 ### Challenge 2 - Consume messages from multiple services
+In the second part of the  challenge, you need the extend the Quarkus app in order to index person data and their associated addresses from two separate backend services: the person service and the address service. 
+The solution must handle the relationship between persons and their multiple addresses, as well as updates to addresses, ensuring data consistency and search performance.
+
 ![Architecture Diagram](doc/images/challenge2.png)
+
+* Assume there are two backends, person service and address service, each sending its own data to the Kafka topic.
+* To simplify the challenge, assume that an address message is always sent after its associated person message, and the ordering of the messages in a partition is guaranteed.
+* A person can have multiple addresses, and the indexer should store this relationship in Elasticsearch.
+* Ensure that updates to a person's addresses, such as adding a new address, are reflected in Elasticsearch.
 
 ### Challenge 3 - Improve the Indexer Service
 
