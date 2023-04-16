@@ -58,7 +58,7 @@ A query for the created index might look like this:
 }
 ```
 
-[Source Code](./src/main/java/org.example/challenge1)
+[Source Code](https://github.com/patrickamsler/bootcamp-search-index/tree/main/src/main/java/org/example/challenge1)
 
 ### Challenge 2 - Consume messages from multiple services
 In the second part of the  challenge, you need the extend the Quarkus app in order to index person data and their associated addresses from two separate backend services: the person service and the address service. 
@@ -71,7 +71,7 @@ The solution must handle the relationship between persons and their multiple add
 * A person can have multiple addresses, and the indexer should store this relationship in Elasticsearch.
 * Ensure that updates to a person's addresses, such as adding a new address, are reflected in Elasticsearch.
 
-[Source Code](./src/main/java/org.example/challenge2)
+[Source Code](https://github.com/patrickamsler/bootcamp-search-index/tree/main/src/main/java/org/example/challenge2)
 
 ### Challenge 3 - Improve the Indexer Service
 
