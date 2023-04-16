@@ -58,6 +58,8 @@ A query for the created index might look like this:
 }
 ```
 
+[Source Code](./src/main/java/org.example/challenge1)
+
 ### Challenge 2 - Consume messages from multiple services
 In the second part of the  challenge, you need the extend the Quarkus app in order to index person data and their associated addresses from two separate backend services: the person service and the address service. 
 The solution must handle the relationship between persons and their multiple addresses, as well as updates to addresses, ensuring data consistency and search performance.
@@ -68,6 +70,8 @@ The solution must handle the relationship between persons and their multiple add
 * To simplify the challenge, assume that an address message is always sent after its associated person message, and the ordering of the messages in a partition is guaranteed.
 * A person can have multiple addresses, and the indexer should store this relationship in Elasticsearch.
 * Ensure that updates to a person's addresses, such as adding a new address, are reflected in Elasticsearch.
+
+[Source Code](./src/main/java/org.example/challenge2)
 
 ### Challenge 3 - Improve the Indexer Service
 
@@ -92,7 +96,7 @@ Explore different solutions.:
 ## How to run
 Please note that the instructions provided are specific to running Elastic and Kafka using Docker. If you have Elastic and Kafka running on your local machine, you can skip this step.
 
-### Run Elastic with Docker
+### Elastic Docker Setup
 There is a Docker Compose file that defines two services for running Elastic and Kibana on your local machine.
 
 1. `cd bootcamp-search-index/docker/elastic`
@@ -105,7 +109,7 @@ username: `elastic`
 
 password: `elastic`
 
-### Run Kafka with Docker
+### Kafka Docker Setup
 The Docker Compose file sets up a Confluent Kafka cluster with a Zookeeper node, a single broker, a Schema Registry, Kafka Connect, the Control Center and a KSQLDB server.
 
 1. `cd bootcamp-search-index/docker/kafka`
