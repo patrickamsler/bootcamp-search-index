@@ -1,14 +1,30 @@
 # Tech Bootcamp - Search Index
 
 ## Table of Contents
+- [Overview](#overview)
+- [Challenges](#challenges)
+  - [Challenge 1 - Create the Indexer Service](#challenge-1---create-the-indexer-service)
+  - [Challenge 2 - Consume the messages from Multiple Services](#challenge-2---consume-the-messages-from-multiple-services)
+  - [Challenge 3 - Improve the Indexer Service](#challenge-3---improve-the-indexer-service)
 - [How to run](#how-to-run)
-    - [Elastic Docker Setup](#elastic-docker-setup)
-    - [Kafka Docker Setup](#kafka-docker-setup)
-    - [Clean up](#clean-up)
+  - [Elastic Docker Setup](#elastic-docker-setup)
+  - [Kafka Docker Setup](#kafka-docker-setup)
+  - [Clean up](#clean-up)
 
 ## Overview
 
 TODO add description
+
+## Challenges
+
+### Challenge 1 - Create the Indexer Service
+
+![Architecture Diagram](doc/images/challenge1.png)
+
+### Challenge 2 - Consume the messages from Multiple Services
+![Architecture Diagram](doc/images/challenge2.png)
+
+### Challenge 3 - Improve the Indexer Service
 
 ## How to run
 Please note that the instructions provided are specific to running Elastic and Kafka using Docker. If you have Elastic and Kafka running on your local machine, you can skip this step.
