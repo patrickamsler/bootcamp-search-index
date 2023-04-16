@@ -4,7 +4,7 @@
 - [Overview](#overview)
 - [Challenges](#challenges)
   - [Challenge 1 - Create the Indexer Service](#challenge-1---create-the-indexer-service)
-  - [Challenge 2 - Consume the messages from Multiple Services](#challenge-2---consume-the-messages-from-multiple-services)
+  - [Challenge 2 - Consume messages from Multiple Services](#challenge-2---consume-messages-from-multiple-services)
   - [Challenge 3 - Improve the Indexer Service](#challenge-3---improve-the-indexer-service)
 - [How to run](#how-to-run)
   - [Elastic Docker Setup](#elastic-docker-setup)
@@ -27,17 +27,6 @@ Requirements:
 
 * Indexer: Create a Quarkus application that consumes messages from the given Kafka topic and indexes the data into a single Elasticsearch index, considering only the searchable fields of the entities.
 * Multi-field Search: Enable users to search multiple fields simultaneously across different backends. Returning just the entity IDs as the query result is sufficient. The actual data can be retrieved from the backend directly.
-For a nested data structure, the query could look something like this:
-```luce
-{
-  "query": {
-    "multi_match": {
-      "query": "John Smith Main St",
-      "fields": ["firstName", "lastName", "addresses.street"]
-    }
-  }
-}
-```
 * Data Synchronization: Ensure that Elasticsearch is always in-sync with the different backends, maintaining data integrity and consistency.
 * Extensibility: Although partial updates and deletes are not considered in this challenge, design the indexer in a way that allows for easy extension to handle these operations in the future.
 
@@ -48,10 +37,28 @@ Deliverables:
 * A brief demo showcasing the functionality and performance of the developed solution, including the multi-field search capability and data synchronization between Elasticsearch and backends.
 
 ### Challenge 1 - Create the indexer service
+In this part you are tasked with creating the Indexer as a Quarkus application that indexes person data and their associated addresses from a single backend into a single Elasticsearch index.
 
 ![Architecture Diagram](doc/images/challenge1.png)
 
-### Challenge 2 - Consume the messages from multiple services
+* Assume there is only one backend sending person data, including their associated addresses.
+* If a person message comes in twice (e.g., because of an update), simply overwrite the existing document in Elasticsearch.
+* Create a single Elasticsearch index to store the person and address data, choose a nested or parent/child document structure that is optimized for search performance.
+
+A query for the created index might look like this:
+```luce
+{
+  "_source": ["_id"],
+  "query": {
+    "multi_match": {
+      "query": "John Smith Main St",
+      "fields": ["firstName", "lastName", "addresses.street"]
+    }
+  }
+}
+```
+
+### Challenge 2 - Consume messages from multiple services
 ![Architecture Diagram](doc/images/challenge2.png)
 
 ### Challenge 3 - Improve the Indexer Service
