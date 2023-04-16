@@ -71,7 +71,7 @@ The solution must handle the relationship between persons and their multiple add
 * A person can have multiple addresses, and the indexer should store this relationship in Elasticsearch.
 * Ensure that updates to a person's addresses, such as adding a new address, are reflected in Elasticsearch.
 
-[Source Code](https://github.com/patrickamsler/bootcamp-search-index/blob/main/src/main/java/org/example/challenge2/RandomPersonAndAddressGenerator.java)
+[Source Code](https://github.com/patrickamsler/bootcamp-search-index/blob/main/src/main/java/org/example/challenge2/PersonAndAddressProducer.java)
 
 ### Challenge 3 - Improve the Indexer Service
 
