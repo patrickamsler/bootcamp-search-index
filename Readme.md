@@ -71,6 +71,24 @@ The solution must handle the relationship between persons and their multiple add
 
 ### Challenge 3 - Improve the Indexer Service
 
+* Improve the solution in order to handle messages from different backend services that can arrive in a random order, including the possibility that an address message arrives before its associated person message.
+Explore different solutions.:
+  * On the consumer side by introducing caching, buffering, or other techniques.
+  * On the producer side by synchronizing the backends to ensure that the messages are sent in the correct order.
+  * Creating a clever document structure in Elasticsearch that allows adding a child (address) before the parent (person).
+  * Using Kafka Streams to join parent with child or reorder the messages.
+
+
+* Extend the search capabilities of the existing solution.
+  * Enhance the schema and queries to support fuzzy search and field-based scoring, allowing for matches even when there are slight variations in the search terms (e.g., "Meier" also matches "Meyer").
+  * Introduce a scoring mechanism to prioritize search results based on the relevance of different fields, such as lastName having a higher score than firstName, and firstName having a higher score than the address fields.
+  * Add user-specific meta information, such as the user's workplace, to influence the search results. For example, if a user works in Gemeind Arbon, prioritize people in Arbon in the search results.
+
+
+* Implementing a full data load or initial load strategy (aka the infamous Data Creator)
+* Implement a mechanism to replay the Kafka topic.
+* Explore the possibility to sync the PostgreSql database with Elasticsearch by using Debezium and Kafka Connect.
+
 ## How to run
 Please note that the instructions provided are specific to running Elastic and Kafka using Docker. If you have Elastic and Kafka running on your local machine, you can skip this step.
 
