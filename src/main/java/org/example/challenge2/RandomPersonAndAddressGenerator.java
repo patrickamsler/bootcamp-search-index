@@ -18,8 +18,7 @@ public class RandomPersonAndAddressGenerator {
 
   private static final String[] FIRST_NAMES = {"John", "Jane", "Michael", "Emily", "David", "Samantha"};
   private static final String[] LAST_NAMES = {"Smith", "Johnson", "Lee", "Garcia", "Davis", "Taylor"};
-  private static final String[] CITIES = {"New York", "Los Angeles", "Chicago", "Houston", "Miami", "Seattle"};
-  private static final String[] STATES = {"NY", "CA", "IL", "TX", "FL", "WA"};
+  private static final String[] CITIES = {"New York,NY", "Los Angeles,CA", "Chicago,IL", "Houston,TX", "Miami,FL", "Seattle,WA"};
   private static final String[] STREET_NAMES = {"Main St", "First St", "Second St", "Third St", "Fourth St",
       "Fifth Ave", "Sixth Ave"};
 
@@ -72,9 +71,10 @@ public class RandomPersonAndAddressGenerator {
       int numAddresses = RANDOM.nextInt(2) + 1;
       for (int i = 0; i < numAddresses; i++) {
         String addressId = UUID.randomUUID().toString();
+        String[] cityAndState = CITIES[RANDOM.nextInt(CITIES.length)].split(",");
+        String city = cityAndState[0];
+        String state = cityAndState[1];
         String street = STREET_NAMES[RANDOM.nextInt(STREET_NAMES.length)] + " " + (RANDOM.nextInt(1000) + 1);
-        String city = CITIES[RANDOM.nextInt(CITIES.length)];
-        String state = STATES[RANDOM.nextInt(STATES.length)];
 
         Address address = new Address(addressId, person.getId(), street, city, state);
         addresses.add(address);
