@@ -26,7 +26,7 @@ The solution should ensure data synchronization between Elasticsearch and the va
 Requirements:
 
 * Indexer: Create a Quarkus application that consumes messages from the given Kafka topic and indexes the data into a single Elasticsearch index, considering only the searchable fields of the entities.
-* Multi-field Search: Enable users to search multiple fields simultaneously across different backends. Returning just the entity IDs as the query result is sufficient. The actual data can be retrieved from the backend directly. The specific searchable fields are: lastname, firstname, city, and street.
+* Multi-field Search: Enable users to search multiple fields simultaneously across different backends. Returning just the entity IDs as the query result is sufficient. The actual data can be retrieved from the backend directly. The specific searchable fields are: lastname, firstname, birth year, city, and street.
 * Data Synchronization: Ensure that Elasticsearch is always in-sync with the different backends, maintaining data integrity and consistency.
 * Extensibility: Although partial updates and deletes are not considered in this challenge, design the indexer in a way that allows for easy extension to handle these operations in the future.
 
