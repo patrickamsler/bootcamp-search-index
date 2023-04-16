@@ -85,7 +85,7 @@ Explore different solutions.:
 
 * Extend the search capabilities of the existing solution.
   * Enhance the schema and queries to support fuzzy search and field-based scoring, allowing for matches even when there are slight variations in the search terms (e.g., "Meier" also matches "Meyer").
-  * Introduce a scoring mechanism to prioritize search results based on the relevance of different fields, such as lastName having a higher score than firstName, and firstName having a higher score than the address fields.
+  * Introduce a scoring mechanism to prioritize search results based on the relevance of different fields.
   * Add user-specific meta information, such as the user's workplace, to influence the search results. For example, if a user works in City X, prioritize people living in City X in the search results.
 
 
